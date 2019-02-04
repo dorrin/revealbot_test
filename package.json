@@ -1,0 +1,27 @@
+{
+  "name": "revealbot_test",
+  "version": "1.0.0",
+  "author": "d.trukhin",
+  "description": "Demo for revealbot",
+  "dependencies": {
+    "protractor": "^5.4.2"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.3.8",
+    "@types/node": "^10.12.21",
+    "allure-commandline": "^2.9.0",
+    "allure2-js-commons": "^1.2.0",
+    "jasmine": "^3.3.1",
+    "jasmine-allure2-reporter": "^1.2.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.1"
+  },
+  "scripts": {
+    "pretsc": "webdriver-manager update",
+    "tsc": "tsc",
+    "pretest": "npm run tsc",
+    "test": "protractor tmp/protractor.conf.js",
+    "report": "allure generate allure-results --clean -o allure-report && allure open allure-report"
+  }
+}
